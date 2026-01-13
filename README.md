@@ -1,14 +1,20 @@
 
-# Environment Variables (Functions Framework + CloudEvent)
+# Configuration Management (GCP Cloud Functions)
 
-This project demonstrates reading environment variables inside a Python Functions Framework function triggered by a CloudEvent.
+This project demonstrates **configuration management patterns** for GCP Cloud Functions using:
+
+- Environment variables (12-factor style config)
+- A parameter manager abstraction (see `app/services/parameter_manager.py`)
+- A secret manager abstraction (see `app/services/secret_manager.py`)
+
+The function entrypoint is implemented using the Python Functions Framework with a CloudEvent trigger.
 
 ## Local setup
 
 1) Create a `.env` file (do not commit it):
 
 ```bash
-APP_DEBUG=true
+DEBUG=true
 SECRET_KEY=local-dev-secret
 DATABASE_URL=postgres://user:pass@localhost:5432/db
 ```
@@ -22,7 +28,7 @@ python -m pip install -r requirements.txt
 3) Run the Functions Framework locally:
 
 ```bash
-functions-framework --target main --signature-type cloudevent --port 8080
+functions-framework --target env_dump_cloud_event --signature-type cloudevent --port 8080
 ```
 
 If your shell can’t find `functions-framework`, run it via Python instead:
