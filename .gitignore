@@ -1,0 +1,75 @@
+# Python.gitignore (best-practice baseline)
+
+## Secrets / local env files
+.env
+.env.*
+*.env
+.envrc
+.direnv/
+
+## OS / Editor
+.DS_Store
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+
+## Python bytecode / caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+## Virtual environments
+.venv/
+venv/
+env/
+.env/
+ENV/
+VENV/
+pip-wheel-metadata/
+
+## Packaging / build artifacts
+*.egg-info/
+.eggs/
+*.egg
+build/
+dist/
+wheelhouse/
+
+## Test / coverage
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+nosetests.xml
+htmlcov/
+coverage/
+*.cover
+.hypothesis/
+
+## Type checking / linting / formatting
+.mypy_cache/
+.pyre/
+.pytype/
+.pyright/
+.ruff_cache/
+
+## Notebooks
+.ipynb_checkpoints/
+
+## Logs / temp
+*.log
+*.bak
+*.tmp
+*.old
+
+## Local databases
+*.sqlite3
+*.db
+
+## Python version managers
+.python-version
+.tool-versions
