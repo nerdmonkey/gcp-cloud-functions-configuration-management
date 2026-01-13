@@ -1,5 +1,5 @@
 
-# Configuration Management (GCP Cloud Functions)
+# Configuration Management for GCP Cloud Functions
 
 This project demonstrates **configuration management patterns** for GCP Cloud Functions using:
 
