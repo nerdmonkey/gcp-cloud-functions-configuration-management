@@ -14,7 +14,7 @@ The function entrypoint is implemented using the Python Functions Framework with
 1) Create a `.env` file (do not commit it):
 
 ```bash
-DEBUG=true
+APP_DEBUG=true
 SECRET_KEY=local-dev-secret
 DATABASE_URL=postgres://user:pass@localhost:5432/db
 ```
@@ -28,18 +28,18 @@ python -m pip install -r requirements.txt
 3) Run the Functions Framework locally:
 
 ```bash
-functions-framework --target env_dump_cloud_event --signature-type cloudevent --port 8080
+functions-framework --target main --signature-type cloudevent --port 8080
 ```
 
 If your shell can’t find `functions-framework`, run it via Python instead:
 
 ```bash
-python -m functions_framework --target env_dump_cloud_event --signature-type cloudevent --port 8080
+python -m functions_framework --target main --signature-type cloudevent --port 8080
 ```
 
 Notes on the command:
 
-- `--target` must be the Python function name (here: `env_dump_cloud_event`), not the filename.
+- `--target` must be the Python function name (here: `main`), not the filename.
 - Don’t include a trailing `--` at the end of the command.
 
 4) Send a sample CloudEvent:
