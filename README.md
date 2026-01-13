@@ -22,7 +22,7 @@ python -m pip install -r requirements.txt
 3) Run the Functions Framework locally:
 
 ```bash
-functions-framework --target env_dump_cloud_event --signature-type cloudevent --port 8080
+functions-framework --target main --signature-type cloudevent --port 8080
 ```
 
 If your shell can’t find `functions-framework`, run it via Python instead:
